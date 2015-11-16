@@ -1,6 +1,6 @@
 =encoding utf8
 
-=head1 JavaScript backend for Rakudo [Project Title Here]
+=head1 JavaScript backend for Rakudo 
 
 =over 1
 
@@ -73,8 +73,6 @@ your grant into many small goals makes it harder to overlook
 difficulties, and easier to see progress as you complete your grant.]
 
 =over
-
-=item *
 
 =item * 
 
