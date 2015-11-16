@@ -18,8 +18,8 @@ USD 3,000 [How much is your project worth?]
 
 [A short description]
 
-
-TODO
+Rakudo compiles Perl 6 and NQP (a currently faster Perl 6 that Rakudo itself is written in to an abstract syntax tree form called QAST.
+QAST can currently be turned into either MoarVM or JVM backend. Currently QAST produced from NQP code can be turned into JavaScript. The goal of this project is to allow QAST produced from full Perl 6 code to be turned into JavaScript.
 
 
 =head2 Benefits to the Perl Community
@@ -28,8 +28,10 @@ TODO
 this project?]
 
 A JavaScript backend for Rakudo will allow the use of Perl 6 in many new niches.
-The main focus of the grant is to allow Perl 6 to be used for writing the frontend part of single page applications.
+The main focus of the grant is to allow Perl 6 to be used for writing the frontend part of single page applications (for the backend part we can use MoarVM).
 A side benefit of the grant is that I intend to create a web-base REPL that should allow users to play around with Perl 6 without installing it.
+After the completion of the grant there will still be issued that need to addressed before Perl 6 compiled to JavaScript can be deployed into production such as the size of the generated code as well as the performance and tool support.
+The goal of the grant is provide a JavaScript backend with enough features that the community can start experimenting with what running inside the browser will allow us to accomplish.
 
 =head2 Deliverables
 
