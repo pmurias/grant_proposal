@@ -78,7 +78,11 @@ I started the original work on the JavaScript backend while Rakudo was transitio
 Asfter the GSoC projects I undertook a rewrite of the backend. The rewrite allowed me to add source maps support and use more type information to generated better code.
 The JavaScript backend is now merged in the the master branch of the NQP repo.
 
-After reviewing the initial draft of this grant proposal Jonathan Worthington pointed out that implementing gather/take proved to be tricky on other backends. To reduce this risk I added basic continuations support to the backend. This was enough to run a basic form of gather/take: https://github.com/perl6/nqp/blob/master/t/js/continuations.t#L76 . I implemented this using a CPS transform with a trampoline (to work around the lack of tail call optimalization).
+After reviewing the initial draft of this grant proposal Jonathan Worthington pointed out that implementing gather/take proved to be tricky on other backends. To reduce this risk I added basic continuations support to the backend. This was enough to run a basic form of gather/take: https://github.com/perl6/nqp/blob/master/t/js/continuations.t#L76 . I implemented this using a CPS transform with a trampoline (to work around the lack of tail call optimization).
+
+Most of Perl 6 is built from smaller building blocks.
+This will mean that a large part of the effort will be needed before I get to the point where the test module compiles and the first test passes.
+On the other hand when the needed building blocks are implemented correctly I will be able to reuse the quality work that went into Rakudo and the setting.
 
 =head2 Inch-stones
 
