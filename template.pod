@@ -28,6 +28,7 @@ this project?]
 
 A JavaScript backend for Rakudo will allow the use of Perl 6 in many new niches.
 The main focus of the grant is to allow Perl 6 to be used for writing the frontend part of single page applications (for the backend part we can use MoarVM).
+
 A side benefit of the grant is that I intend to create a web-based REPL that should allow users to play around with Perl 6 without installing it.
 The goal of the grant is provide a JavaScript backend with enough features that the community can start experimenting with what running inside the browser will allow us to accomplish.
 
@@ -48,7 +49,7 @@ Upload rakudo-js to npm and CPAN.
 
 =item *
 
-Have this rakudo-js be able compile our chosen subset of roast to JavaScript and pass them in a modern browser.
+Have this rakudo-js be able compile our chosen subset of the 6.c roast (official Perl 6 test suit) to JavaScript and pass them in a modern browser.
 
 =item *
 
@@ -69,7 +70,7 @@ QAST is then passed to either the MoarVM, JVM or JavaScript backends.
 Currently the JavaScript backend can only handle AST that is produces from NQP.
 The goal of this project is to improve the JavaScript backend to handle the QAST produced from full Perl 6.
 
-I started the orginal work on the JavaScript backend while Rakudo was transitiong from being a Parrot targeting compiler to a multiplatform one. Parts of the work on the backend was done as parts of a GSoC project.
+I started the original work on the JavaScript backend while Rakudo was transitioning from being a Parrot targeting compiler to a multi-platform one. Parts of the work on the backend was done as parts of a GSoC project.
 Asfter the GSoC projects I undertook a rewrite of the backend. The rewrite allowed me to add source maps support and use more type information to generated better code.
 The JavaScript backend is now merged in the the master branch of the NQP repo.
 
@@ -168,11 +169,17 @@ I will begin work as soon as the grant gets accepted.
 [How long will the project take? When can you begin work?
 Be realistic.]
 
+=head2 Report Schedule
+
+I will report on the progress of the grant on a blog at least every two weeks, preferably more often.
+I will also keep the #perl6 channel updated on my progress.
+
 =head2 Completeness Criteria
 
 [Describe how your grant can be evaluated. For instance, code will be
 merged in Perl tree, or a module will be released to CPAN with the
 specified features, etc.]
+
 
 =over
 
@@ -186,6 +193,8 @@ specified features, etc.]
     A simple Perl 6 REPL running in a modern browser (for evaluation purposes a modern version of Google Chrome)
 
 =back
+
+The backend will be available in the nqp repo at: https://github.com/perl6/nqp/.
 
 =head2 List of tests we want to pass
 
@@ -513,12 +522,13 @@ S32-trig
 
 Performance and size of the generated JavaScript code will likely be an important concern before using the backend for serious production use.
 While I'll attempt to keep it in mind as it's a very open ended issue it's not the main focus of the grant.
-As the feedback from the #perl6 channel seemed to imply webapps are the thing the community is the most interested in, I'm moving IO support while running on node.js outside of the grant.
+As the feedback from the #perl6 channel seemed to imply webapps are the thing the community is the most interested in, I'm moving IO support while running on node.js outside of the scope of grant.
 
 =head2 Bio
 
 Worked on the mildew/smop/kp6 Perl 6 implementations.
 Worked on nqp-js outside of and as part of a Google Summer of Code project.
+I have tweaked both the MoarVM and JVM backends so if changes to the whole of NQP are required I will be capable of that.
 
 TODO - expand
 [Who are you? What makes you the best person to work on this project?]
