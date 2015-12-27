@@ -32,6 +32,10 @@ The main focus of the grant is to allow Perl 6 to be used for writing the fronte
 A side benefit of the grant is that I intend to create a web-based REPL that should allow users to play around with Perl 6 without installing it.
 The goal of the grant is provide a JavaScript backend with enough features that the community can start experimenting with what running inside the browser will allow us to accomplish.
 
+While working on the JavaScript backend I write test for the things I'm implementing.
+Expanding the test suite will directly help future backend authors.
+It also helps anyone doing non trivial changes to the existing backends.
+I have found MoarVM and JVM bugs in the past doing that.
 
 =head2 Deliverables
 
