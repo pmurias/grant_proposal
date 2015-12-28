@@ -71,11 +71,11 @@ for, show that you have endorsement from the primary maintainer.]
 
 Rakudo compiles Perl 6 and NQP (a subset of Perl 6 that Rakudo itself is written in) to an abstract syntax tree form called QAST.
 QAST is then passed to either the MoarVM, JVM or JavaScript backends.
-Currently the JavaScript backend can only handle AST that is produces from NQP.
+Currently the JavaScript backend can only handle AST that is produced from NQP.
 The goal of this project is to improve the JavaScript backend to handle the QAST produced from full Perl 6.
 
 I started the original work on the JavaScript backend while Rakudo was transitioning from being a Parrot targeting compiler to a multi-platform one. Parts of the work on the backend was done as parts of a GSoC project.
-Asfter the GSoC projects I undertook a rewrite of the backend. The rewrite allowed me to add source maps support and use more type information to generated better code.
+After the GSoC projects I undertook a rewrite of the backend. The rewrite allowed me to add source maps support and use more type information to generate better code.
 The JavaScript backend is now merged in the the master branch of the NQP repo.
 
 After reviewing the initial draft of this grant proposal Jonathan Worthington pointed out that implementing gather/take proved to be tricky on other backends. To reduce this risk I added basic continuations support to the backend. This was enough to run a basic form of gather/take: https://github.com/perl6/nqp/blob/master/t/js/continuations.t#L76 . I implemented this using a CPS transform with a trampoline (to work around the lack of tail call optimization).
@@ -157,7 +157,7 @@ Pass the part of roast we focus on in a browser.
 Polish up source maps support.
 
 =item *
-Implement (and test) interopablity with javascript code
+Implement (and test) interoperablity with javascript code
 
 =item *
 Upload rakudo-js on npm.
@@ -210,7 +210,7 @@ We want to pass tests from the official Perl 6 Test Suit "Roast".
 It can be found on github.com/perl6/roast.
 
 For the purpose of the grant we focus on a subset of those (mainly excluding IO and OS interaction).
-Some tests might be broken for reasons outside the JavaScript backend so that for grant completeness purposes we are only concerned with the tests that pass on the Rakudo MoarVM backend.
+Some tests might be broken for reasons outside of the JavaScript backend so that for grant completeness purposes we are only concerned with the tests that pass on the Rakudo MoarVM backend.
 
 We want to pass the tests in the following subdirectories of roast:
 
