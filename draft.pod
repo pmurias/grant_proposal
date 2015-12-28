@@ -172,7 +172,7 @@ Put the REPL on try.perl6.org if the community views it as good enough.
 
 =head2 Project Schedule
 
-3 months.
+The project is expected to take 3 months of full time effort.
 I will begin work as soon as the grant gets accepted.
 [How long will the project take? When can you begin work?
 Be realistic.]
