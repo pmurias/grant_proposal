@@ -166,7 +166,7 @@ Upload rakudo-js on npm.
 Write a simple Perl6 REPL that should run in modern browser.
 
 =item *
-Put the REPL on try.perl6.org if the community views it as good enough.
+Put the REPL on try.perl6.org when the community views it as good enough.
 
 =back
 
