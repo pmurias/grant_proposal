@@ -10,7 +10,7 @@ Paweł Murias
 
 =item Amount Requested:
 
-USD 5,000
+USD 10,000
 
 =back
 
@@ -157,7 +157,7 @@ Pass the part of roast we focus on in a browser.
 Polish up source maps support.
 
 =item *
-Implement (and test) interoperablity with javascript code
+Implement (and test) interoperability with javascript code
 
 =item *
 Upload rakudo-js on npm.
@@ -168,12 +168,46 @@ Write a simple Perl6 REPL that should run in modern browser.
 =item *
 Put the REPL on try.perl6.org when the community views it as good enough.
 
+=item *
+Write a tutorial that describes how to use the backend.
+
+=item *
+Make sure our source map support works correctly and integrates well with browsers.
+
+=item *
+Fix issues that early adopters will encounter.
+
+=item *
+Fix the most obvious performance issues.
+
 =back
 
 =head2 Project Schedule
 
-The project is expected to take 3 months of full time effort.
+The project is expected to take 4 months of full time effort.
 I will begin work as soon as the grant gets accepted.
+Based on the progress of previous backends most of the effort will be needed to get to the point where all the basic building blocks are working and we start passing tests.
+
+The plan for the months of the grant is:
+
+=over
+
+=item *
+Getting to the point where can begin compiling the CORE setting.
+
+=item *
+Correctly compile and load the setting.
+
+=item *
+Fixing inevitable bugs that cause failing tests and implementing missing bits of functionality.
+After this steps we should be passing the roast test suit.
+
+=item *
+Working on making the backend easy to install and use.
+This will include writing a tutorial, fixing issues that early users find, tweaking source maps, improving obvious performance problems.
+
+=cut
+
 [How long will the project take? When can you begin work?
 Be realistic.]
 
@@ -195,7 +229,7 @@ specified features, etc.]
     Rakudo-js released on npm
 
 =item *
-    Rakudo-js passes our choosen subset of roast
+    Rakudo-js passes our chosen subset of roast
 
 =item *
     A simple Perl 6 REPL running in a modern browser (for evaluation purposes a modern version of Google Chrome)
