@@ -567,10 +567,9 @@ As the feedback from the #perl6 channel seemed to imply webapps are the thing th
 =head2 Bio
 
 Worked on the mildew/smop/kp6 Perl 6 implementations.
-Worked on nqp-js outside of and as part of a Google Summer of Code project.
+Once the Perl 6 implementations converged on Rakudo I started working on the JavaScript backend for it, starting first with one for NQP.
+I worked on the JavaScript backend for NQP outside of and as part of a Google Summer of Code project.
 I have tweaked both the MoarVM and JVM backends so if changes to the whole of NQP are required I will be capable of that.
-
-TODO - expand
 [Who are you? What makes you the best person to work on this project?]
 
 [Before submitting this proposal, review it again. Check the POD syntax.
