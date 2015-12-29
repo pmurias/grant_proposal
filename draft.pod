@@ -206,10 +206,8 @@ After this steps we should be passing the roast test suit.
 Working on making the backend easy to install and use.
 This will include writing a tutorial, fixing issues that early users find, tweaking source maps, improving obvious performance problems.
 
-=cut
+=back
 
-[How long will the project take? When can you begin work?
-Be realistic.]
 
 =head2 Report Schedule
 
