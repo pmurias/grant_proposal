@@ -59,6 +59,10 @@ Have this rakudo-js be able compile our chosen subset of the 6.c roast (official
 
 Write a simple REPL in Perl 6 that will run in a modern browser.
 
+=item *
+
+Write a tutorial showing how to use the JavaScript backend.
+
 =back
 
 =head2 Project Details
