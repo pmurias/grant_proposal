@@ -1,30 +1,18 @@
 =encoding utf8
 
-=head1 JavaScript backend for Rakudo 
-
-=over 1
-
-=item Name:
-
+=head1 Name
 Paweł Murias
 
-=item Amount Requested:
+=head1 Project Title
 
-USD 10,000
+JavaScript backend for Rakudo 
 
-=back
 
 =head2 Synopsis
 
-[A short description]
-
 Improve the JavaScript backend from handling NQP (Not Quite Perl) to full Perl 6.
 
-
-=head2 Benefits to the Perl Community
-
-[Is this work worth doing? Why should the Perl Community grant
-this project?]
+=head2 Benefits to to Perl 6 Development
 
 A JavaScript backend for Rakudo will allow the use of Perl 6 in many new niches.
 The main focus of the grant is to allow Perl 6 to be used for writing the frontend part of single page applications (for the backend part we can use MoarVM).
@@ -38,12 +26,6 @@ It also helps anyone doing non trivial changes to the existing backends.
 I have found MoarVM and JVM bugs in the past doing that.
 
 =head2 Deliverables
-
-[Quantifiable results e.g. "Improve X modules in ways Y and Z",
-"Write 3 articles for X website".]
-
-[If you cannot clearly define the deliverables, you are not quite ready
-to submit this.]
 
 =over
 
@@ -67,11 +49,6 @@ Write a tutorial showing how to use the JavaScript backend.
 
 =head2 Project Details
 
-[A more detailed description.]
-
-[It will be beneficial to include the progress made to date (if any).
-If you aren't the primary maintainer of the project you want funding
-for, show that you have endorsement from the primary maintainer.]
 
 Rakudo compiles Perl 6 and NQP (a subset of Perl 6 that Rakudo itself is written in) to an abstract syntax tree form called QAST.
 QAST is then passed to either the MoarVM, JVM or JavaScript backends.
@@ -88,14 +65,7 @@ Most of Perl 6 is built from smaller building blocks.
 This will mean that a large part of the effort will be needed before I get to the point where the test module compiles and the first test passes.
 On the other hand when the needed building blocks are implemented correctly I will be able to reuse the quality work that went into Rakudo and the setting.
 
-=head2 Inch-stones
-
-[Break down your project into small chunks. By listing your tasks
-adequately, other people will understand you know what you need to do.]
-
-[Try and think in "inch-stones" rather than "mile-stones". Breaking down
-your grant into many small goals makes it harder to overlook
-difficulties, and easier to see progress as you complete your grant.]
+=head3 Inch-stones
 
 =over
 
@@ -186,44 +156,7 @@ Fix the most obvious performance issues.
 
 =back
 
-=head2 Project Schedule
-
-The project is expected to take 4 months of full time effort.
-I will begin work as soon as the grant gets accepted.
-Based on the progress of previous backends most of the effort will be needed to get to the point where all the basic building blocks are working and we start passing tests.
-
-The plan for the months of the grant is:
-
-=over
-
-=item *
-Getting to the point where can begin compiling the CORE setting.
-
-=item *
-Correctly compile and load the setting.
-
-=item *
-Fixing inevitable bugs that cause failing tests and implementing missing bits of functionality.
-After this steps we should be passing the roast test suit.
-
-=item *
-Working on making the backend easy to install and use.
-This will include writing a tutorial, fixing issues that early users find, tweaking source maps, improving obvious performance problems.
-
-=back
-
-
-=head2 Report Schedule
-
-I will report on the progress of the grant on a blog at least every two weeks, preferably more often.
-I will also keep the #perl6 channel updated on my progress.
-
-=head2 Completeness Criteria
-
-[Describe how your grant can be evaluated. For instance, code will be
-merged in Perl tree, or a module will be released to CPAN with the
-specified features, etc.]
-
+=head3 Completeness Criteria
 
 =over
 
@@ -238,9 +171,7 @@ specified features, etc.]
 
 =back
 
-The backend will be available in the nqp repo at: https://github.com/perl6/nqp/.
-
-=head2 List of tests we want to pass
+=head3 List of tests we want to pass
 
 We want to pass tests from the official Perl 6 Test Suit "Roast".
 It can be found on github.com/perl6/roast.
@@ -562,11 +493,69 @@ S32-trig
 
 =back
 
+=head2 Project Schedule
+
+The project is expected to take 4 months of full time effort.
+I will begin work as soon as the grant gets accepted.
+Based on the progress of previous backends most of the effort will be needed to get to the point where all the basic building blocks are working and we start passing tests.
+
+The plan for the months of the grant is:
+
+=over
+
+=item *
+Getting to the point where can begin compiling the CORE setting.
+
+=item *
+Correctly compile and load the setting.
+
+=item *
+Fixing inevitable bugs that cause failing tests and implementing missing bits of functionality.
+After this steps we should be passing the roast test suit.
+
+=item *
+Working on making the backend easy to install and use.
+This will include writing a tutorial, fixing issues that early users find, tweaking source maps, improving obvious performance problems.
+
+=back
+
+=head2 Report Schedule
+
+I will report on the progress of the grant on a blog at least every two weeks, preferably more often.
+I will also keep the #perl6 channel updated on my progress.
+
+=head2 Public Repository:
+
+The backend code will be hosted at github.com/perl6/nqp.
+Any required modifications to rakudo will be hosted at github.com/perl6/rakudo.
+(Work on rakudo itself will intially be done in either a branch or a github fork).
+
+=head2 Grant Deliverables ownership/copyright and License Information
+
+All the work produced as a result of this grant will be licensed under the Artistic License Version 2.0.
+I will send in the CLA and if required transfer the copyright to The Perl Foundation.
+
+=head2 Nationality
+
+Polish
+
+=head2 Country of Residence
+
+Poland
+
 =head2 Things not addressed by the scope of the grant
 
 Performance and size of the generated JavaScript code will likely be an important concern before using the backend for serious production use.
 While I'll attempt to keep it in mind as it's a very open ended issue it's not the main focus of the grant.
 As the feedback from the #perl6 channel seemed to imply webapps are the thing the community is the most interested in, I'm moving IO support while running on node.js outside of the scope of grant.
+
+=head2 Amount Requested
+
+I request $10000.
+
+=head2 Okay to publish proposal
+
+Yes
 
 =head2 Bio
 
@@ -574,11 +563,11 @@ Worked on the mildew/smop/kp6 Perl 6 implementations.
 Once the Perl 6 implementations converged on Rakudo I started working on the JavaScript backend for it, starting first with one for NQP.
 I worked on the JavaScript backend for NQP outside of and as part of a Google Summer of Code project.
 I have tweaked both the MoarVM and JVM backends so if changes to the whole of NQP are required I will be capable of that.
-[Who are you? What makes you the best person to work on this project?]
 
-[Before submitting this proposal, review it again. Check the POD syntax.
-Use a spell checker.  If possible, get it reviewed by someone who
-understands the value of your project.]
+=head2 Suggestions for Grant Manager
+
+
+TODO - contacting potential grant manager
 
 =cut
 
